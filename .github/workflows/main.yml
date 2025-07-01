@@ -54,3 +54,6 @@ jobs:
 
           # Path for specific folder on server for files deployment
           remote-path: /home/gavin_unitytheory/gavinmorrow.com
+
+          # temp
+          sync: full
