@@ -56,4 +56,4 @@ jobs:
           remote-path: /home/gavin_unitytheory/gavinmorrow.com
 
           # Port for SFTP access to server
-          remote-port: 221
+          remote-port: 22
