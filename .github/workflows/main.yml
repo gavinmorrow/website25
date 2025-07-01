@@ -48,12 +48,9 @@ jobs:
           remote-protocol: sftp
 
           # Credentials for SFTP access to server using GitHub secrets
-          remote-host: ${{ secrets.SFTP_HOST }}
-          remote-user: ${{ secrets.SFTP_USER }}
+          remote-host: "gavinmorrow.com"
+          remote-user: "gavin_unitytheory"
           remote-password: ${{ secrets.SFTP_PASSWORD }}
 
           # Path for specific folder on server for files deployment
           remote-path: /home/gavin_unitytheory/gavinmorrow.com
-
-          # Port for SFTP access to server
-          remote-port: 22
