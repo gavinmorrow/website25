@@ -81,4 +81,10 @@ a.selected {
 
 .btn88x31 {
   image-rendering: pixelated;
+  transform: rotate(0deg);
+  transition: transform 1.2s ease;
+}
+
+.btn88x31:hover {
+  transform: rotate(360deg);
 }
