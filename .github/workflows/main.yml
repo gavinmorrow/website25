@@ -56,4 +56,4 @@ jobs:
           remote-path: /home/gavin_unitytheory/gavinmorrow.com
 
           # temp
-          sync: full
+          # sync: full
