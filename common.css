@@ -88,3 +88,12 @@ a.selected {
 .btn88x31:hover {
   transform: rotate(360deg);
 }
+
+#all-hell-btn {
+  transition-property: filter;
+}
+
+#all-hell-btn:hover {
+  filter: contrast(500%);
+  transform: rotate(0deg);
+}
