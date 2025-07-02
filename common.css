@@ -93,6 +93,13 @@ a:has(.btn88x31) {
   text-decoration: none;
 }
 
+#im-a-shark-btn:not(:hover) {
+  content: url("/buttons/im-a-shark.png");
+}
+#im-a-shark-btn:hover {
+  transform: none;
+}
+
 #all-hell-btn {
   transition-property: filter;
 }
