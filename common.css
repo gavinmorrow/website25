@@ -44,14 +44,17 @@ h1 {
   margin-bottom: 0;
 }
 
-/* See <https://stackoverflow.com/questions/54702124/rainbow-text-animation-using-only-css> */
-h1:hover {
-  background: var(--gradient-enby);
-  background-clip: text;
-  color: transparent;
+/* only animate w/out reduced motion */
+@media (prefers-reduced-motion: no-preference) {
+  /* See <https://stackoverflow.com/questions/54702124/rainbow-text-animation-using-only-css> */
+  h1:hover {
+    background: var(--gradient-enby);
+    background-clip: text;
+    color: transparent;
 
-  animation: slide 1s linear infinite;
-  background-size: calc(12em * 4);
+    animation: slide 1s linear infinite;
+    background-size: calc(12em * 4);
+  }
 }
 
 @keyframes slide {
@@ -85,16 +88,26 @@ a.selected {
   transition: transform 1.2s ease;
 }
 
-.btn88x31:hover {
-  transform: rotate(360deg);
-}
-
 a:has(.btn88x31) {
   text-decoration: none;
 }
 
-#im-a-shark-btn:hover {
-  transform: scale(-1, 1);
+/* only animate w/out reduced motion */
+@media (prefers-reduced-motion: no-preference) {
+  .btn88x31:hover {
+    transform: rotate(360deg);
+  }
+
+  #im-a-shark-btn:hover {
+    transform: scale(-1, 1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #im-a-shark-btn {
+    /* don't show gif w/ reduced motion */
+    content: url("/buttons/im-a-shark.png");
+  }
 }
 
 #all-hell-btn {
