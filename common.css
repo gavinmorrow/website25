@@ -89,6 +89,10 @@ a.selected {
   transform: rotate(360deg);
 }
 
+a:has(.btn88x31) {
+  text-decoration: none;
+}
+
 #all-hell-btn {
   transition-property: filter;
 }
