@@ -98,13 +98,13 @@ a:has(.btn88x31) {
     transform: rotate(360deg);
   }
 
-  #im-a-shark-btn:hover {
+  .hover-flip:hover {
     transform: scale(-1, 1) rotate(0deg);
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  #im-a-shark-btn {
+  .hover-flip {
     /* don't show gif w/ reduced motion */
     content: url("/buttons/im-a-shark.png");
   }
