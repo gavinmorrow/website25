@@ -113,9 +113,15 @@ a:has(.btn88x31) {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hover-flip {
-    /* don't show gif w/ reduced motion */
+  /* don't show gifs w/ reduced motion */
+  #btn-im-a-shark {
     content: url("/buttons/im-a-shark.png");
+  }
+  #btn-helix {
+    content: url("/buttons/helix.png");
+  }
+  #btn-subway {
+    content: url("/buttons/subway.png");
   }
 }
 
