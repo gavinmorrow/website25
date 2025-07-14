@@ -101,6 +101,15 @@ a:has(.btn88x31) {
   .hover-flip:hover {
     transform: scale(-1, 1) rotate(0deg);
   }
+
+  .hover-flip-v {
+    /* So the transition works properly */
+    transform: scale(1, 1);
+  }
+
+  .hover-flip-v:hover {
+    transform: scale(1, -1) rotate(0deg);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
