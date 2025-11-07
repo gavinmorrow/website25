@@ -1,6 +1,6 @@
 # Wrangling the FUTD01 DMX Transmitter
 
-2025-11-06
+2025-11-06 (edits: 2025-11-07 to add tldr)
 
 (Note: no AI of any kind was used in the writing of this post.)
 
@@ -14,6 +14,12 @@ Hopefully this will help someone else out with the same problem :]
 [official manual]: https://miboxer.com/light/m_n/pdf/FUTD01/FUTD01_EN_V1.0.pdf
 
 The two main terms to know are *zones*/*channels* and *address*.
+
+TL;DR: To patch a light, take the 5 addresses starting from
+       `DXXX + 5*(CHXX-1)`. Each light gets a channel. **The DMX address
+       is a base address for the transmitter; it is *not* an address for the
+       individual light.** Each light's address is an offset from the base
+       address, determined by its channel.
 
 ## Zones
 
