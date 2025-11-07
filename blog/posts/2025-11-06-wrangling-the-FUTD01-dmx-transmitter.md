@@ -15,11 +15,11 @@ Hopefully this will help someone else out with the same problem :]
 
 The two main terms to know are *zones*/*channels* and *address*.
 
-TL;DR: To patch a light, take the 5 addresses starting from
-       `DXXX + 5*(CHXX-1)`. Each light gets a channel. **The DMX address
-       is a base address for the transmitter; it is *not* an address for the
-       individual light.** Each light's address is an offset from the base
-       address, determined by its channel.
+**TL;DR**: To patch a light, take the 5 addresses starting from
+           `DXXX + 5*(CHXX-1)`. Each light gets a channel. **The DMX address is
+           a base address for the transmitter; it is *not* an address for the
+           individual light.** Each light's address is an offset from the base
+           address, determined by its channel.
 
 ## Zones
 
