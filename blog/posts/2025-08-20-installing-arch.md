@@ -64,6 +64,22 @@
   - Adding users:
     - Add the admin user to `%wheel`, edit the sudoers file to reflect that.
 
+## KDE
+
+(2026-05-01)
+
+- Easy, just do `pacman -Sy plasma-meta`.
+  - I choose a meta group b/c I can't imagine a situation in which I want only
+    part of KDE installed, but I can easily imagine wanting to uninstall all
+    of it.
+- Make sure to disable IWD and enable NetworkManager in systemctl.
+  - NetworkManager is IWD but for KDE. (There is an IWD backend for
+    NetworkManager, but I haven't tried it.)
+- Enable the display manager via `systemctl enable plasmalogin`.
+- Will need to install Konsole probably after first install. Make sure to have
+  either enabled NetworkManager before installing KDE, or disable IWD after
+  installing Konsole.
+
 [btrfs-tutorial]: https://ramsdenj.com/posts/2016-04-05-using-btrfs-for-easy-backup-and-rollback/
 [pacman-conflicting-files]: https://wiki.archlinux.org/title/Pacman#%22Failed_to_commit_transaction_(conflicting_files)%22_error
 [iwd-enable-network-config]: https://wiki.archlinux.org/title/Iwd#Enable_built-in_network_configuration
