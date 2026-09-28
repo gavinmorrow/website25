@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ASCII Table</title>
+  </head>
+  <body>
+    <table id="table">
+      <caption>
+        ASCII Printable Range
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col">Decimal</th>
+          <th scope="col">Binary</th>
+          <th scope="col">Hex</th>
+          <th scope="col">Symbol</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <script>
+      const table = document.getElementById("table");
+      const tbody = table.querySelector("tbody");
+
+      const printableRange = [/* 32 */ 0b00100000, /* 127 */ 0b01111111];
+      for (let i = printableRange[0]; i < printableRange[1]; i++) {
+        const decimal = i.toString().padStart(3, "0");
+        const binary = i.toString(2).padStart(8, "0");
+        const hex = i.toString(16).toUpperCase().padStart(2, "0");
+        const symbol = String.fromCharCode(i);
+
+        const row = document.createElement("tr");
+        row.innerHTML = `<th scope="row">${decimal}</th><td>${binary}</td><td>${hex}</td><td>${symbol}</td>`;
+        tbody.appendChild(row);
+      }
+    </script>
+  </body>
+</html>
