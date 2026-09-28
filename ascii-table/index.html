@@ -69,7 +69,7 @@
 
       const printableRange = [/* 32 */ 0b00100000, /* 127 */ 0b01111111];
       for (let i = printableRange[0]; i < printableRange[1]; i++) {
-        const decimal = i.toString().padStart(3, "0");
+        const decimal = i.toString();
         const binary = i.toString(2).padStart(8, "0");
         const hex = i.toString(16).toUpperCase().padStart(2, "0");
         const symbol = String.fromCharCode(i);
